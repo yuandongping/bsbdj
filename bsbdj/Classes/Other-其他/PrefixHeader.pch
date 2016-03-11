@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  budejie
+//
+//  Created by 袁冬平 on 16/3/8.
+//  Copyright © 2016年 袁冬平. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIView+AbleExtension.h"
+#import "UIBarButtonItem+AbleExtension.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef DEBUG
+#define AbleLog(...) NSLog(__VA_ARGS__)
+#else
+#define AbleLog(...)
+#endif
+
+#define  AbleLogFunc AbleLog(@"%s", __func__)
+
+#define AbleRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue: (b)/255.0 alpha:1.0]
+#define AbleGlobaBg AbleRGBColor(223, 223, 223)
+
+#endif /* PrefixHeader_pch */
