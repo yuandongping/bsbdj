@@ -1,6 +1,7 @@
 platform :ios, "8.0"
-
-pod "AFNetworking"
-pod "SDWebImage"
-pod "SVProgressHUD"
-
+target :bsbdj do
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'MJExtension'
+end
