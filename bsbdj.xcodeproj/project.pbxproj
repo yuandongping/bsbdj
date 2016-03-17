@@ -26,6 +26,8 @@
 		FA6137031C9034C400FC2B97 /* AbleFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6137021C9034C400FC2B97 /* AbleFriendTrendsViewController.m */; };
 		FA6137081C90352800FC2B97 /* AbleMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6137071C90352800FC2B97 /* AbleMeViewController.m */; };
 		FA61370D1C90356100FC2B97 /* AbleNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61370C1C90356100FC2B97 /* AbleNewViewController.m */; };
+		FA7120161C994EB100A896F1 /* AbleRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7120141C994EB100A896F1 /* AbleRecommendUserCell.m */; };
+		FA71201A1C99585B00A896F1 /* AbleRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7120191C99585B00A896F1 /* AbleRecommendUser.m */; };
 		FA7C6AE71C97E86C00D29906 /* AbleRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6AE51C97E86C00D29906 /* AbleRecommendCategoryCell.m */; };
 		FA7C6AE81C97E86C00D29906 /* AbleRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7C6AE61C97E86C00D29906 /* AbleRecommendCategoryCell.xib */; };
 		FA8F12F21C92AFE9004C99AD /* AbleRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8F12F11C92AFE9004C99AD /* AbleRecommendCategory.m */; };
@@ -88,6 +90,10 @@
 		FA6137071C90352800FC2B97 /* AbleMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleMeViewController.m; path = "Classes/Me-我的/Controller/AbleMeViewController.m"; sourceTree = "<group>"; };
 		FA61370B1C90356100FC2B97 /* AbleNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleNewViewController.h; path = "Classes/New-新帖/Controller/AbleNewViewController.h"; sourceTree = "<group>"; };
 		FA61370C1C90356100FC2B97 /* AbleNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleNewViewController.m; path = "Classes/New-新帖/Controller/AbleNewViewController.m"; sourceTree = "<group>"; };
+		FA7120131C994EB100A896F1 /* AbleRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendUserCell.h; path = "Classes/FriendTrends-关注/View/AbleRecommendUserCell.h"; sourceTree = "<group>"; };
+		FA7120141C994EB100A896F1 /* AbleRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendUserCell.m; path = "Classes/FriendTrends-关注/View/AbleRecommendUserCell.m"; sourceTree = "<group>"; };
+		FA7120181C99585B00A896F1 /* AbleRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendUser.h; path = "Classes/FriendTrends-关注/Model/AbleRecommendUser.h"; sourceTree = "<group>"; };
+		FA7120191C99585B00A896F1 /* AbleRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendUser.m; path = "Classes/FriendTrends-关注/Model/AbleRecommendUser.m"; sourceTree = "<group>"; };
 		FA7C6AE41C97E86C00D29906 /* AbleRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendCategoryCell.h; path = "Classes/FriendTrends-关注/View/AbleRecommendCategoryCell.h"; sourceTree = "<group>"; };
 		FA7C6AE51C97E86C00D29906 /* AbleRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendCategoryCell.m; path = "Classes/FriendTrends-关注/View/AbleRecommendCategoryCell.m"; sourceTree = "<group>"; };
 		FA7C6AE61C97E86C00D29906 /* AbleRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AbleRecommendCategoryCell.xib; path = "Classes/FriendTrends-关注/View/AbleRecommendCategoryCell.xib"; sourceTree = "<group>"; };
@@ -334,6 +340,8 @@
 				FA7C6AE41C97E86C00D29906 /* AbleRecommendCategoryCell.h */,
 				FA7C6AE51C97E86C00D29906 /* AbleRecommendCategoryCell.m */,
 				FA7C6AE61C97E86C00D29906 /* AbleRecommendCategoryCell.xib */,
+				FA7120131C994EB100A896F1 /* AbleRecommendUserCell.h */,
+				FA7120141C994EB100A896F1 /* AbleRecommendUserCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -343,6 +351,8 @@
 			children = (
 				FA8F12F01C92AFE9004C99AD /* AbleRecommendCategory.h */,
 				FA8F12F11C92AFE9004C99AD /* AbleRecommendCategory.m */,
+				FA7120181C99585B00A896F1 /* AbleRecommendUser.h */,
+				FA7120191C99585B00A896F1 /* AbleRecommendUser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -539,6 +549,7 @@
 				FA6137081C90352800FC2B97 /* AbleMeViewController.m in Sources */,
 				FA61370D1C90356100FC2B97 /* AbleNewViewController.m in Sources */,
 				FA6136FE1C90309E00FC2B97 /* AbleEssenceViewController.m in Sources */,
+				FA71201A1C99585B00A896F1 /* AbleRecommendUser.m in Sources */,
 				FA2DC2291C912B1100FEC54E /* AbleNavigationController.m in Sources */,
 				FA6136F91C902FBB00FC2B97 /* UIBarButtonItem+AbleExtension.m in Sources */,
 				FA8F12F21C92AFE9004C99AD /* AbleRecommendCategory.m in Sources */,
@@ -548,6 +559,7 @@
 				FA7C6AE71C97E86C00D29906 /* AbleRecommendCategoryCell.m in Sources */,
 				FA6136F61C902F2900FC2B97 /* UIView+AbleExtension.m in Sources */,
 				FA6136F21C902EC300FC2B97 /* AbleTabBar.m in Sources */,
+				FA7120161C994EB100A896F1 /* AbleRecommendUserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

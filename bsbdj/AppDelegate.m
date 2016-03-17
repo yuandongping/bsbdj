@@ -26,6 +26,9 @@
     //设置窗口的根控制器
     self.window.rootViewController = [[AbleTabBarController alloc] init];
     
+    AbleLog(@"======%d",(int)self.window.frame.size.height);//568
+    AbleLog(@"======%d",(int)self.window.frame.size.width);//320
+    
     //显示窗口
     [self.window makeKeyAndVisible];
 

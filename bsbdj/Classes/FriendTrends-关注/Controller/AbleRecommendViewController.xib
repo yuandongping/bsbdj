@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AbleRecommendViewController">
             <connections>
                 <outlet property="categoryTabView" destination="eD4-gT-N3b" id="L1Q-m9-bBy"/>
+                <outlet property="userTabView" destination="dPd-Iw-xao" id="iut-xq-LVk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +17,40 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eD4-gT-N3b">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eD4-gT-N3b" userLabel="左侧">
                     <rect key="frame" x="0.0" y="0.0" width="80" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="wXI-9n-Lgh"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="gkW-iL-AGW"/>
                         <outlet property="delegate" destination="-1" id="uSf-02-bKx"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-Iw-xao" userLabel="右侧">
+                    <rect key="frame" x="80" y="0.0" width="300" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="eB8-FU-z6x"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="4fH-1e-25v"/>
+                    </connections>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="273" y="302"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dPd-Iw-xao" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Zo-Tt-vuA"/>
+                <constraint firstAttribute="trailing" secondItem="dPd-Iw-xao" secondAttribute="trailing" id="FSN-EF-dup"/>
+                <constraint firstAttribute="bottom" secondItem="dPd-Iw-xao" secondAttribute="bottom" id="FV3-Rq-jd3"/>
+                <constraint firstItem="dPd-Iw-xao" firstAttribute="leading" secondItem="eD4-gT-N3b" secondAttribute="trailing" id="Unb-fy-NPO"/>
+                <constraint firstItem="eD4-gT-N3b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WvJ-zz-sIk"/>
+                <constraint firstItem="dPd-Iw-xao" firstAttribute="leading" secondItem="eD4-gT-N3b" secondAttribute="trailing" id="gfn-uQ-kf8"/>
+                <constraint firstItem="eD4-gT-N3b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="h2t-2K-TT3"/>
+                <constraint firstAttribute="bottom" secondItem="eD4-gT-N3b" secondAttribute="bottom" id="zVJ-gz-ZPN"/>
+            </constraints>
+            <point key="canvasLocation" x="294" y="309"/>
         </view>
     </objects>
 </document>
