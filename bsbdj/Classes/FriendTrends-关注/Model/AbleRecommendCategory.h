@@ -32,5 +32,4 @@
 @property (nonatomic, assign) NSInteger currentPage;
 
 
-
 @end

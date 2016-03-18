@@ -1,16 +1,18 @@
 //
-//  AbleRecommendUserCell.m
+//  AbleRecommendTagCell.m
 //  bsbdj
 //
-//  Created by 袁冬平 on 16/3/16.
+//  Created by 袁冬平 on 16/3/18.
 //  Copyright © 2016年 袁冬平. All rights reserved.
 //
 
-#import "AbleRecommendUserCell.h"
-#import "AbleRecommendUser.h"
+#import "AbleRecommendTagCell.h"
 #import "UIImageView+WebCache.h"
+#import "AbleRecommendTag.h"
 
-@interface AbleRecommendUserCell()
+
+@interface AbleRecommendTagCell()
+
 /**头像*/
 @property (nonatomic, strong) UIImageView *headerImageView;
 //
@@ -25,10 +27,9 @@
 
 @end
 
-@implementation AbleRecommendUserCell
+@implementation AbleRecommendTagCell
 
-
-- (id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     //1、初始化
@@ -43,7 +44,7 @@
     fansCountLabel.font = [UIFont systemFontOfSize:12.0];
     fansCountLabel.textColor = [UIColor grayColor];
     
-    [guazhuButton setTitle:@"+ 关注" forState:UIControlStateNormal];
+    [guazhuButton setTitle:@"+ 订阅" forState:UIControlStateNormal];
     [guazhuButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [guazhuButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     guazhuButton.titleLabel.font = [UIFont systemFontOfSize: 12.0];
@@ -51,10 +52,10 @@
     [guazhuButton setBackgroundImage:[UIImage imageNamed:@"FollowBtnBg"] forState:UIControlStateNormal];
     [guazhuButton setBackgroundImage:[UIImage imageNamed:@"FollowBtnClickBg"] forState:UIControlStateHighlighted];
     guazhuButton.size = CGSizeMake(50, 25);
-        //让按钮内部的所有内容左对齐
+    //让按钮内部的所有内容左对齐
     guazhuButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-
-//    [guazhuButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    
+//        [guazhuButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     
     //2、添加
     [self addSubview:self.headerImageView = headerImageView];
@@ -65,12 +66,13 @@
     return self;
 }
 
-- (void) setUser:(AbleRecommendUser *)user
+-(void) setRecommendTag:(AbleRecommendTag *)recommendTag
 {
-    _user = user;
-    self.screenNameLabel.text = user.screen_name;
-    self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    AbleLog(@"===========");
+//    _recommendTag = recommendTag;
+    self.screenNameLabel.text = recommendTag.theme_name;
+    self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人订阅", recommendTag.sub_number];
+    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:recommendTag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
 }
 
 @end

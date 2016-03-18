@@ -214,7 +214,7 @@ static NSString * const AbleUserId = @"user";
         
         //字典数组 -> 模型数组
         NSArray *users = [AbleRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        //        AbleLog(@"%@", users);
+//        AbleLog(@"++++%@++++++", users);
         
         //添加到当前类别对应的用户数组中
         [category.users addObjectsFromArray:users];
@@ -314,8 +314,6 @@ static NSString * const AbleUserId = @"user";
     //停止所有的操作
     [self.manager.operationQueue cancelAllOperations];
 }
-
-
 
 /**
  需要解决的问题

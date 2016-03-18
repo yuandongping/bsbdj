@@ -30,6 +30,9 @@
 		FA71201A1C99585B00A896F1 /* AbleRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7120191C99585B00A896F1 /* AbleRecommendUser.m */; };
 		FA7C6AE71C97E86C00D29906 /* AbleRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7C6AE51C97E86C00D29906 /* AbleRecommendCategoryCell.m */; };
 		FA7C6AE81C97E86C00D29906 /* AbleRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7C6AE61C97E86C00D29906 /* AbleRecommendCategoryCell.xib */; };
+		FA8E4E001C9B960F00DDBFFD /* AbleRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8E4DFF1C9B960F00DDBFFD /* AbleRecommendTagsViewController.m */; };
+		FA8E4E031C9B97CB00DDBFFD /* AbleRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8E4E021C9B97CB00DDBFFD /* AbleRecommendTag.m */; };
+		FA8E4E071C9B9B1900DDBFFD /* AbleRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8E4E061C9B9B1900DDBFFD /* AbleRecommendTagCell.m */; };
 		FA8F12F21C92AFE9004C99AD /* AbleRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8F12F11C92AFE9004C99AD /* AbleRecommendCategory.m */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +100,12 @@
 		FA7C6AE41C97E86C00D29906 /* AbleRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendCategoryCell.h; path = "Classes/FriendTrends-关注/View/AbleRecommendCategoryCell.h"; sourceTree = "<group>"; };
 		FA7C6AE51C97E86C00D29906 /* AbleRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendCategoryCell.m; path = "Classes/FriendTrends-关注/View/AbleRecommendCategoryCell.m"; sourceTree = "<group>"; };
 		FA7C6AE61C97E86C00D29906 /* AbleRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AbleRecommendCategoryCell.xib; path = "Classes/FriendTrends-关注/View/AbleRecommendCategoryCell.xib"; sourceTree = "<group>"; };
+		FA8E4DFE1C9B960F00DDBFFD /* AbleRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendTagsViewController.h; path = "Classes/Essence-精选/Controller/AbleRecommendTagsViewController.h"; sourceTree = "<group>"; };
+		FA8E4DFF1C9B960F00DDBFFD /* AbleRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendTagsViewController.m; path = "Classes/Essence-精选/Controller/AbleRecommendTagsViewController.m"; sourceTree = "<group>"; };
+		FA8E4E011C9B97CB00DDBFFD /* AbleRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendTag.h; path = "Classes/Essence-精选/Model/AbleRecommendTag.h"; sourceTree = "<group>"; };
+		FA8E4E021C9B97CB00DDBFFD /* AbleRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendTag.m; path = "Classes/Essence-精选/Model/AbleRecommendTag.m"; sourceTree = "<group>"; };
+		FA8E4E051C9B9B1900DDBFFD /* AbleRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendTagCell.h; path = "Classes/Essence-精选/View/AbleRecommendTagCell.h"; sourceTree = "<group>"; };
+		FA8E4E061C9B9B1900DDBFFD /* AbleRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendTagCell.m; path = "Classes/Essence-精选/View/AbleRecommendTagCell.m"; sourceTree = "<group>"; };
 		FA8F12F01C92AFE9004C99AD /* AbleRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbleRecommendCategory.h; path = "Classes/FriendTrends-关注/Model/AbleRecommendCategory.h"; sourceTree = "<group>"; };
 		FA8F12F11C92AFE9004C99AD /* AbleRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbleRecommendCategory.m; path = "Classes/FriendTrends-关注/Model/AbleRecommendCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,6 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				FA6136FB1C90308000FC2B97 /* Controller */,
+				FA8E4DFD1C9B951800DDBFFD /* Model */,
+				FA8E4E041C9B9AA700DDBFFD /* View */,
 			);
 			name = "Essence-精选";
 			sourceTree = "<group>";
@@ -273,6 +284,8 @@
 			children = (
 				FA6136FC1C90309E00FC2B97 /* AbleEssenceViewController.h */,
 				FA6136FD1C90309E00FC2B97 /* AbleEssenceViewController.m */,
+				FA8E4DFE1C9B960F00DDBFFD /* AbleRecommendTagsViewController.h */,
+				FA8E4DFF1C9B960F00DDBFFD /* AbleRecommendTagsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -342,6 +355,24 @@
 				FA7C6AE61C97E86C00D29906 /* AbleRecommendCategoryCell.xib */,
 				FA7120131C994EB100A896F1 /* AbleRecommendUserCell.h */,
 				FA7120141C994EB100A896F1 /* AbleRecommendUserCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FA8E4DFD1C9B951800DDBFFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E4E011C9B97CB00DDBFFD /* AbleRecommendTag.h */,
+				FA8E4E021C9B97CB00DDBFFD /* AbleRecommendTag.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FA8E4E041C9B9AA700DDBFFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA8E4E051C9B9B1900DDBFFD /* AbleRecommendTagCell.h */,
+				FA8E4E061C9B9B1900DDBFFD /* AbleRecommendTagCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -543,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8E4E031C9B97CB00DDBFFD /* AbleRecommendTag.m in Sources */,
 				FA6136BA1C902AC900FC2B97 /* AppDelegate.m in Sources */,
 				FA3CC3B71C918F6800C454ED /* AbleRecommendViewController.m in Sources */,
 				FA6136B71C902AC900FC2B97 /* main.m in Sources */,
@@ -553,6 +585,7 @@
 				FA2DC2291C912B1100FEC54E /* AbleNavigationController.m in Sources */,
 				FA6136F91C902FBB00FC2B97 /* UIBarButtonItem+AbleExtension.m in Sources */,
 				FA8F12F21C92AFE9004C99AD /* AbleRecommendCategory.m in Sources */,
+				FA8E4E001C9B960F00DDBFFD /* AbleRecommendTagsViewController.m in Sources */,
 				FA6137031C9034C400FC2B97 /* AbleFriendTrendsViewController.m in Sources */,
 				FA6136ED1C902E1900FC2B97 /* AbleTabBarController.m in Sources */,
 				FA3CC3BA1C919B3300C454ED /* Foundation+Log.m in Sources */,
@@ -560,6 +593,7 @@
 				FA6136F61C902F2900FC2B97 /* UIView+AbleExtension.m in Sources */,
 				FA6136F21C902EC300FC2B97 /* AbleTabBar.m in Sources */,
 				FA7120161C994EB100A896F1 /* AbleRecommendUserCell.m in Sources */,
+				FA8E4E071C9B9B1900DDBFFD /* AbleRecommendTagCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
