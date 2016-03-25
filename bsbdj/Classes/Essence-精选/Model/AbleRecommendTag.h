@@ -15,9 +15,6 @@
 /** 图片 */
 @property (nonatomic, copy) NSString *image_list;
 
-/** id */
-@property (nonatomic, assign) NSInteger theme_id;
-
 /** 名称 */
 @property (nonatomic, copy) NSString *theme_name;
 

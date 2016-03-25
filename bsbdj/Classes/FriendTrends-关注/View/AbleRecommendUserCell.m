@@ -61,7 +61,6 @@
     [self addSubview:self.screenNameLabel = screenNameLabel];
     [self addSubview:self.fansCountLabel = fansCountLabel];
     [self addSubview:self.guazhuButton = guazhuButton];
-    
     return self;
 }
 
@@ -69,8 +68,15 @@
 {
     _user = user;
     self.screenNameLabel.text = user.screen_name;
-    self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
     [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    NSString *fansCount= nil;
+    if (user.fans_count < 10000) {
+        fansCount = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
+    }else{
+        fansCount = [NSString stringWithFormat:@"%.1f万人关注", user.fans_count / 10000.0];
+    }
+    self.fansCountLabel.text = fansCount;
 }
 
 @end

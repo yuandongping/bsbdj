@@ -37,7 +37,11 @@ static NSString * const AbleTagId = @"recommendTag";
 - (void)setupTableView
 {
     self.title = @"推荐标签";
-
+    self.tableView.rowHeight = 90;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = AbleGlobaBg;
+    //注册，循环标识
+    [self.tableView registerClass:[AbleRecommendTagCell class] forCellReuseIdentifier:AbleTagId];
 }
 
 /** 加载推荐标签数据 */
@@ -48,8 +52,9 @@ static NSString * const AbleTagId = @"recommendTag";
     
     //发送请求
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"tags_list";
-    params[@"c"] = @"subscribe";
+    params[@"a"] = @"tag_recommend";
+    params[@"action"] = @"sub";
+    params[@"c"] = @"topic";
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"success");
@@ -59,8 +64,7 @@ static NSString * const AbleTagId = @"recommendTag";
         //服务器返回的json数据
         AbleLog(@"%@", responseObject);
 //        self.recommendTags = responseObject[@"list"];
-//        self.recommendTags = [AbleRecommendTag  mj_objectArrayWithKeyValuesArray:responseObject[@"rec_tags"]];
-        AbleLog(@"%zd", self.recommendTags.count);
+        self.recommendTags = [AbleRecommendTag  mj_objectArrayWithKeyValuesArray:responseObject];
         
         //刷新表格
         [self.tableView reloadData];
@@ -68,7 +72,7 @@ static NSString * const AbleTagId = @"recommendTag";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"failure");
         //隐藏指示器
-        //        [SVProgressHUD dismiss];
+//      [SVProgressHUD dismiss];
         //显示一些失败信息
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
@@ -81,11 +85,9 @@ static NSString * const AbleTagId = @"recommendTag";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@", @"22ds");
-    AbleLog(@"%@", self.recommendTags[0]);
+//    AbleLog(@"%@", self.recommendTags[0]);
     AbleRecommendTagCell *cell = [tableView dequeueReusableCellWithIdentifier:AbleTagId];
     cell.recommendTag = self.recommendTags[indexPath.row];
-    NSLog(@"----%@",    cell.recommendTag.image_list);
     return cell;
 }
 
